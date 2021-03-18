@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring DOM 2</title>
+
+    <style>
+        article{
+            border: 2px solid lightblue;
+            border-radius: 20px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h3>Exploring DOM</h3>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quos vel inventore ab mollitia provident labore eius nostrum, a quidem id debitis quae commodi alias aut reprehenderit ipsum harum.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Minus cumque totam similique sapiente autem atque, recusandae hic ullam sit eius, aliquid quos harum quo modi fuga! Impedit cumque maiores quidem quis. Commodi natus ipsa placeat voluptates, eveniet accusamus!</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Consectetur eaque aspernatur recusandae temporibus, harum quisquam alias molestias atque distinctio veritatis quibusdam laudantium vero vitae voluptates reprehenderit inventore vel consequatur dolores tenetur. Odio alias quia modi libero sint nesciunt?</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        let authors = document.getElementsByClassName('author');
+        for (let i = 0; i < authors.length; i++) {
+            const element = authors[i];
+            element.style.backgroundColor= 'gray';
+            element.style.margin = '5px';
+            element.innerHTML = 'lekhok-' + (i+1);
+        }
+
+        var heading = document.getElementsByTagName ('h3')[0];
+        // heading.innerHTML = 'Exploring Document Object Model';
+        heading.style.color = 'red';
+    </script>
+</body>
+</html>
