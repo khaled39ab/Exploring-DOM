@@ -23,7 +23,7 @@
             <h3>Exploring DOM</h3>
             <article>
                 <h3>article-1</h3>
-                <p class="author">author-1</p>
+                <p class="author" id="best-seller">author-1</p>
                 <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quos vel inventore ab mollitia provident labore eius nostrum, a quidem id debitis quae commodi alias aut reprehenderit ipsum harum.</p>
             </article>
             <article class="special">
@@ -35,6 +35,16 @@
                 <h3>article-3</h3>
                 <p class="author">author-3</p>
                 <p class="description">Consectetur eaque aspernatur recusandae temporibus, harum quisquam alias molestias atque distinctio veritatis quibusdam laudantium vero vitae voluptates reprehenderit inventore vel consequatur dolores tenetur. Odio alias quia modi libero sint nesciunt?</p>
+            </article>
+            <article>
+                <h3>Top Book List</h3>
+                <ul id="book-list">
+                    <li>book-list-1</li>
+                    <li>book-list-2</li>
+                    <li>book-list-3</li>
+                    <li>book-list-4</li>
+                    <li>book-list-5</li>
+                </ul>
             </article>
         </section>
     </main>
@@ -63,6 +73,20 @@
             element.style.fontSize = '30px';
         }
         
+        // setAttribute example
+        let bestSeller = document.getElementById ('best-seller');
+        bestSeller.setAttribute ('title', 'The best seller');
+
+        // createElement example
+        const bibliography = document.getElementById ('best-seller');
+        const newParagraph = document.createElement ('p');
+        newParagraph.innerHTML = "Here is best seller bibliography";
+        bibliography.appendChild (newParagraph);
+
+        const ul = document.getElementById ('book-list');
+        const li = document.createElement ('li');
+        li.innerHTML = "New Book";
+        ul.appendChild (li);
     </script>
 </body>
 </html>
