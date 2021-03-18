@@ -26,12 +26,12 @@
                 <p class="author">author-1</p>
                 <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quos vel inventore ab mollitia provident labore eius nostrum, a quidem id debitis quae commodi alias aut reprehenderit ipsum harum.</p>
             </article>
-            <article>
+            <article class="special">
                 <h3>article-2</h3>
                 <p class="author">author-2</p>
                 <p class="description">Minus cumque totam similique sapiente autem atque, recusandae hic ullam sit eius, aliquid quos harum quo modi fuga! Impedit cumque maiores quidem quis. Commodi natus ipsa placeat voluptates, eveniet accusamus!</p>
             </article>
-            <article>
+            <article class="special"> 
                 <h3>article-3</h3>
                 <p class="author">author-3</p>
                 <p class="description">Consectetur eaque aspernatur recusandae temporibus, harum quisquam alias molestias atque distinctio veritatis quibusdam laudantium vero vitae voluptates reprehenderit inventore vel consequatur dolores tenetur. Odio alias quia modi libero sint nesciunt?</p>
@@ -48,9 +48,21 @@
             element.innerHTML = 'lekhok-' + (i+1);
         }
 
-        var heading = document.getElementsByTagName ('h3')[0];
-        // heading.innerHTML = 'Exploring Document Object Model';
+        // getElementsByTagName example
+        let heading = document.getElementsByTagName ('h3')[0];
+        heading.innerHTML = 'Exploring Document Object Model';
         heading.style.color = 'red';
+
+        // querySelector & querySelectorAll example
+        let article2 = document.querySelector ('.special h3');
+        article2.style.backgroundColor = 'tomato';
+
+        let article3 = document.querySelectorAll ('.special h3');
+        for (let i = 0; i < article3.length; i++) {
+            const element = article3[i];
+            element.style.fontSize = '30px';
+        }
+        
     </script>
 </body>
 </html>
